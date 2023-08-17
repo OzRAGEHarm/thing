@@ -10,6 +10,12 @@
     <iframe src="https://ozrageharm-opulent-bassoon-v59jwqqvx4r3xvp-8080.app.github.dev/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
         Your browser doesn't support iframes
     </iframe>
-	<script src="index.js"></script>
+    <button id="reload">Reload iframe</button>
+    <script>
+      const reloadButton = document.getElementById("reload");
+      reloadButton.addEventListener("click", function() {
+        iframe.contentWindow.location.reload();
+      });
+    </script>
   </body>
 </html>
