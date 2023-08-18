@@ -7,11 +7,13 @@
     <p id="content"></p>
     <script>
     const url = "https://cat.qwerty90.repl.co/";
-    const response = await fetch(url);
-    const html = await response.text();
-    
-    const content = document.getElementById("content");
-    content.innerHTML = `${html}`;
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onload = function() {
+      const html = xhr.responseText;
+      document.body.innerHTML = html;
+    };
+    xhr.send();
     </script>
   </body>
 </html>
