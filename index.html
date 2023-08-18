@@ -11,7 +11,9 @@
     xhr.open("GET", url);
     xhr.onload = function() {
       const html = xhr.responseText;
-      document.body.innerHTML = html;
+      document.getElementById("content").innerHTML = html;
+      document.body.style.height = "100vh";
+      document.body.style.width = "100vw";
     };
     xhr.send();
     </script>
