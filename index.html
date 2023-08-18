@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Thing</title>
+  </head>
+  <body>
+    <p id="content"></p>
+    <script>
+    const url = "https://www.example.com/index.html";
+    const response = await fetch(url);
+    const html = await response.text();
+    
+    const content = document.getElementById("content");
+    content.innerHTML = `${html}`;
+    </script>
+  </body>
+</html>
